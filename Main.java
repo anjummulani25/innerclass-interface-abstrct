@@ -1,24 +1,29 @@
-interface Animal {
-  public void animalSound(); 
-  public void sleep(); 
+
+abstract class Animal {
+  
+  public abstract void animalSound();
+  
+  public void sleep() {
+    System.out.println("Zzz");
+  }
 }
 
 
-class Cat implements Animal {
+class Dog extends Animal {
   public void animalSound() {
-
-    System.out.println("The cat says:meaw meaw ");
-  }
-  public void sleep() {
-  
-    System.out.println("Zzz");
+    
+    System.out.println("The dog says: Bhu Bhu Bhu");
   }
 }
 
 class Main {
   public static void main(String[] args) {
-   Cat c=new Cat(); 
-    c.animalSound();
-    c.sleep();
+    Dog d=new Dog();
+    d.animalSound();
+    d.sleep();
   }
 }
+ 
+ 
+ 
+
